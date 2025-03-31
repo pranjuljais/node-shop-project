@@ -1,9 +1,0 @@
-{
-    "env":{
-        "MONGO_USER":"solataryanonymous",
-        "MONGO_PASSWORD":"npfacebook",
-        "MONGO_DEFAULT_DATABASE":"Shop"
-       
-
-    }
-}
