@@ -129,7 +129,10 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-  .connect(MONGODB_URI)
+  .connect(MONGODB_URI, {
+    ssl: true, // Add this line
+    tlsAllowInvalidCertificates: true, // Optional (for self-signed certs)
+  })
   .then((result) => {
     console.log("MongoDB Connected...");
     app.listen(process.env.PORT || 3001);
