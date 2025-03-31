@@ -14,7 +14,7 @@ const errorController = require("./controllers/error");
 const User = require("./models/user");
 const morgan = require("morgan");
 
-const MONGODB_URI = `mongodb+srv://solataryanonymous:npfacebook@cluster0.aizcc.mongodb.net/Shop?retryWrites=true&w=majority&appName=Cluster0`;
+const MONGODB_URI = `mongodb+srv://solataryanonymous:npfacebook@cluster0.aizcc.mongodb.net/Shop?retryWrites=true&w=majority&appName=Cluster0&tls=true`;
 
 const app = express();
 const store = new MongoDBStore({
@@ -130,8 +130,8 @@ app.use((error, req, res, next) => {
 
 mongoose
   .connect(MONGODB_URI, {
+    tls: true,
     ssl: true, // Add this line
-    tlsAllowInvalidCertificates: true, // Optional (for self-signed certs)
   })
   .then((result) => {
     console.log("MongoDB Connected...");
