@@ -14,7 +14,7 @@ const errorController = require("./controllers/error");
 const User = require("./models/user");
 const morgan = require("morgan");
 
-const MONGODB_URI = `mongodb+srv://solataryanonymous:npfacebook@cluster0.aizcc.mongodb.net/Shop?retryWrites=true&w=majority&appName=Cluster0&tls=true`;
+const MONGODB_URI = `mongodb+srv://solataryanonymous:npfacebook@cluster0.aizcc.mongodb.net/Shop?retryWrites=true&w=majority&appName=Cluster0`;
 
 const app = express();
 const store = new MongoDBStore({
